@@ -1,0 +1,32 @@
+<HTML>
+
+	<HEAD>
+		<TITLE> Loja Bilhetes </TITLE>
+		<STYLE>
+			H1 {Color: RED}
+			BODY{Margin:20 PX;
+			     BackGround-Color:Cyan;
+			     }
+		</STYLE>
+	</HEAD>
+	
+	<BODY>
+		<H1>Bilhetes_Shop </H1>
+		<P>Loja de Bilhetes</P>
+		<HR>
+		<TABLE>
+			<TR>
+			   <TH>Local</TH>
+			   <TH>Concerto</TH>
+			   <TH>Hora</TH>
+			   <TH>Preço</TH>
+			</TR>
+			<TR>
+			   <TD>MEO Arena</TD>
+			   <TD>Travis Scott</TD>
+			   <TD>22:00</TD>
+			   <TD>130 euros</TD>	
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>
