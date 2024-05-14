@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Bilhetes</title>
+    <style>
+        /* Estilos CSS podem ser adicionados aqui ou em um arquivo externo */
+        /* Estilos básicos para o layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .ticket {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .event-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Loja de Bilhetes</h1>
+    </header>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Eventos</a>
+        <a href="#">Contato</a>
+    </nav>
+    <div class="container">
+        <h2>Próximos Eventos</h2>
+        <div class="ticket">
+            <h3>Concerto da Banda X</h3>
+            <p>Data: 15 de maio de 2024</p>
+            <p>Local: Local de Concertos Y</p>
+            <p>Preço: R$ 50,00</p>
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fobservador.pt%2F2022%2F05%2F10%2Fcerca-de-cinco-mil-pessoas-terao-ficado-feridas-no-concerto-de-travis-scott%2F&psig=AOvVaw2W9kWU1AXB8qAtvS_yDoIA&ust=1715765245103000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOCOpePpjIYDFQAAAAAdAAAAABAE" alt="Concerto da Banda X">
+            <button>Comprar</button>
+        </div>
+        <div class="ticket">
+            <h3>Peça de Teatro Z</h3>
+            <p>Data: 20 de maio de 2024</p>
+            <p>Local: Teatro W</p>
+            <p>Preço: R$ 40,00</p>
+            <button>Comprar</button>
+        </div>
+        <!-- Adicione mais eventos conforme necessário -->
+    </div>
+    <footer>
+        <p>&copy; 2024 Loja de Bilhetes. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
