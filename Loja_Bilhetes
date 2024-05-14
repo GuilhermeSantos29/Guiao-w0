@@ -2,6 +2,12 @@
 
 	<HEAD>
 		<TITLE> Loja Bilhetes </TITLE>
+		<STYLE>
+			H1 {Color: RED}
+			BODY{Margin:20 PX;
+			     BackGround-Color:Cyan;
+			     }
+		</STYLE>
 	</HEAD>
 	
 	<BODY>
@@ -22,7 +28,5 @@
 			   <TD>130 euros</TD>	
 			</TR>
 		</TABLE>
-		</HR>
-		
 	</BODY>
 </HTML>
