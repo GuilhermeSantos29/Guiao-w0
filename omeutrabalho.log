@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 commit 0df04c5bfb0931d9603dce3d1cb3134759a93ecc
 Merge: 648e3e7 06de64a
 Author: Guilherme Santos <guilherme.andre.santos@gmail.com>
@@ -5,12 +6,15 @@ Date:   Tue May 14 10:44:52 2024 +0100
 
     Merge branch 'main' of github.com:GuilhermeSantos29/Guiao-w0
 
+=======
+>>>>>>> 68a4f494185507add6eb47c0d0d037f5c7b78e1e
 commit 648e3e7bc9196b520f6335a22c86d56393b7bb84
 Author: Guilherme Santos <guilherme.andre.santos@gmail.com>
 Date:   Tue May 14 10:42:59 2024 +0100
 
     Atualização do site
 
+<<<<<<< HEAD
 commit 06de64a799394304f0317af86d47ae9576fd0d7a
 Merge: 193452a f22a103
 Author: Francisco <1231216@isep.ipp.pt>
@@ -24,6 +28,8 @@ Date:   Tue May 14 09:40:05 2024 +0100
 
     Adiciona diretórios images, scripts e styles
 
+=======
+>>>>>>> 68a4f494185507add6eb47c0d0d037f5c7b78e1e
 commit f22a103393f8cbbf494905d94f07ec8d4f75ed11
 Merge: f447a83 f01ae05
 Author: Guilherme Santos <guilherme.andre.santos@gmail.com>
