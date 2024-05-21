@@ -1,0 +1,74 @@
+commit 0df04c5bfb0931d9603dce3d1cb3134759a93ecc
+Merge: 648e3e7 06de64a
+Author: Guilherme Santos <guilherme.andre.santos@gmail.com>
+Date:   Tue May 14 10:44:52 2024 +0100
+
+    Merge branch 'main' of github.com:GuilhermeSantos29/Guiao-w0
+
+commit 648e3e7bc9196b520f6335a22c86d56393b7bb84
+Author: Guilherme Santos <guilherme.andre.santos@gmail.com>
+Date:   Tue May 14 10:42:59 2024 +0100
+
+    Atualização do site
+
+commit 06de64a799394304f0317af86d47ae9576fd0d7a
+Merge: 193452a f22a103
+Author: Francisco <1231216@isep.ipp.pt>
+Date:   Tue May 14 10:06:54 2024 +0100
+
+    Merge branch 'main' of github.com:GuilhermeSantos29/Guiao-w0
+
+commit 193452a2abe03ed432d1b1d301d77089e6561b59
+Author: Francisco <1231216@isep.ipp.pt>
+Date:   Tue May 14 09:40:05 2024 +0100
+
+    Adiciona diretórios images, scripts e styles
+
+commit f22a103393f8cbbf494905d94f07ec8d4f75ed11
+Merge: f447a83 f01ae05
+Author: Guilherme Santos <guilherme.andre.santos@gmail.com>
+Date:   Tue May 14 09:37:12 2024 +0100
+
+    Merge branch 'main' of github.com:GuilhermeSantos29/Guiao-w0
+
+commit f447a83652f49ba81fca7805c7c99584109661dd
+Author: Guilherme Santos <guilherme.andre.santos@gmail.com>
+Date:   Tue May 14 09:32:21 2024 +0100
+
+    Adicionado 3 diretorios e o ficheiro do site
+
+commit c4f65fc43fc0e58d0c296baae779e5769371889d
+Author: Guilherme Santos <guilherme.andre.santos@gmail.com>
+Date:   Tue May 14 09:04:30 2024 +0100
+
+    ^X
+
+commit f01ae05c2b93ade05103f6c398df00022c6ad0e7
+Author: GuilhermeSantos29 <167853631+GuilhermeSantos29@users.noreply.github.com>
+Date:   Tue May 14 08:27:57 2024 +0100
+
+    Update README.md
+
+commit cf0f6742e095521fd39b047e9629679b875be275
+Author: Guilherme Santos <guilherme.andre.santos@gmail.com>
+Date:   Tue Apr 23 10:44:56 2024 +0100
+
+    2 versao
+
+commit bb488b778c62b61722f7cefdc52eaa55ea341703
+Author: Guilherme Santos <guilherme.andre.santos@gmail.com>
+Date:   Tue Apr 23 10:22:29 2024 +0100
+
+    1 versao
+
+commit e8320dd115fbf6bd878dba747c13153641b427c4
+Author: GuilhermeSantos29 <167853631+GuilhermeSantos29@users.noreply.github.com>
+Date:   Tue Apr 23 08:41:13 2024 +0100
+
+    Update README.md
+
+commit b09d9f1a553f4c4cf22d29507d200eed9497f3a2
+Author: GuilhermeSantos29 <167853631+GuilhermeSantos29@users.noreply.github.com>
+Date:   Tue Apr 23 08:38:17 2024 +0100
+
+    Initial commit
