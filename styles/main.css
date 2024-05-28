@@ -22,9 +22,12 @@ header-2{
 background-color: #ffffff;
 width: 980px;
 margin: 0 auto;
-padding:16px;
+padding:30px;
 }
-
+menu-urls
+{
+border-bottom: 3px solid #efefef;
+}
 .menu ul li{
 	display: inline-block;
 }
