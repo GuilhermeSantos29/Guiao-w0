@@ -236,6 +236,8 @@ include('gftickets_connection.php');
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./scripts/login.js"></script>
+    <script type="text/javascript" src="./scripts/register.js"></script>
+    <script type="text/javascript" src="./scripts/purchase.js"></script>
 </body>
 </html>
