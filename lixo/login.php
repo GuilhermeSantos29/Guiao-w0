@@ -1,11 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['user_id'])) {
-    header("Location: index1.php");
-    exit();
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -156,16 +151,22 @@ if(isset($_SESSION['user_id'])) {
     <div class="header-2">
         <div class="menu">
             <ul>
-                <li><a href="index1.php">Home</a></li>
-                <li><a href="tickets.php">Bilhetes</a></li>
-                <li><a href="register.php">Registar</a></li>
+                <li>
+                    <a href="index1.html">Home</a>
+                </li>
+                <li>
+                    <a href="tickets.html">Bilhetes</a>
+                </li>
+                <li>
+                    <a href="register.html">Registar</a>
+                </li>
             </ul>
         </div>
         <div class="busca">
             <input placeholder="Search Something" type="text" />
         </div>      
     </div>
-    <form id="loginForm" method="post" action="verificar_login.php">
+    <form id="loginForm" method="post" action="/login">
       <div class="form-group">
         <label for="email">Email:</label>   
         <input type="email" id="email" name="email" required>
@@ -176,7 +177,7 @@ if(isset($_SESSION['user_id'])) {
       </div>
       <button type="submit">Login</button>
     </form>
-    <p>Não tem uma conta? <a href="register.php">Registre-se aqui</a></p>
+    <p>Não tem uma conta? <a href="register.html">Registre-se aqui</a></p>
     <footer>
     <div class="col-100">
         <div class="content">

@@ -1,20 +1,12 @@
-<?php
-session_start();
-if(isset($_SESSION['user_id'])) {
-    header("Location: index1.php");
-    exit();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Registrar</title>
   <link rel="stylesheet" type="text/css" href="./Guiao-w0/styles/main.css">
-  <style>
-    body {
+ <style>
+   body {
         width: 100%;
         height: 100%;
         margin: 0 auto;
@@ -23,21 +15,17 @@ if(isset($_SESSION['user_id'])) {
     ul {
         padding: 0px;
     }
-    
+
+    .menu-principal {
+        width: 100%;
+        background-color: #252323;
+        height: 120px;
+    }
+
     main, .content {
         margin: 0 auto;
         width: 980px;
         position: relative;
-    }
-    
-    main h2 {
-        text-align: center;
-    }
-   
-
-    main form {
-        max-width: 400px;
-        margin: 0 auto;
     }
 
     .logo {
@@ -83,12 +71,6 @@ if(isset($_SESSION['user_id'])) {
         width: 70%;
         float: left;
     }
-    
-    .menu-principal {
-        width: 100%;
-        background-color: #252323;
-        height: 120px;
-    }
 
     .busca {
         text-align: center;
@@ -110,6 +92,10 @@ if(isset($_SESSION['user_id'])) {
         position: relative;
     }
 
+    .footer {
+        color: #ffffff;
+    }
+
     .form-group {
         margin-bottom: 15px;
     }
@@ -124,10 +110,6 @@ if(isset($_SESSION['user_id'])) {
         padding: 8px;
         box-sizing: border-box;
     }
-    
-    .footer {
-        color: #ffffff;
-    }
 
     button {
         background-color: #00bac6;
@@ -139,6 +121,11 @@ if(isset($_SESSION['user_id'])) {
 
     button:hover {
         background-color: #009aa6;
+    }
+
+    main form {
+        max-width: 400px;
+        margin: 0 auto;
     }
   </style>
 </head>
@@ -152,31 +139,35 @@ if(isset($_SESSION['user_id'])) {
         </div>
     </main>
 </header>
-<main class="col-100 menu-urls">
+  <main class="col-100 menu-urls">
     <div class="header-2">
         <div class="menu">
             <ul>
                 <li><a href="index1.php">Home</a></li>
                 <li><a href="tickets.php">Bilhetes</a></li>
-                <li><a href="register.php">Registar</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </div>
         <div class="busca">
             <input placeholder="Search Something" type="text" />
-        </div>      
+        </div>
     </div>
-    <form id="loginForm" method="post" action="verificar_login.php">
+    <form id="registerForm" method="post" action="verificar_register.php">
       <div class="form-group">
-        <label for="email">Email:</label>   
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
       </div>
       <div class="form-group">
         <label for="password">Senha:</label>
         <input type="password" id="password" name="password" required>
       </div>
-      <button type="submit">Login</button>
+      <button type="submit">Registrar</button>
     </form>
-    <p>Não tem uma conta? <a href="register.php">Registre-se aqui</a></p>
+    <p>Já tem uma conta? <a href="login.php">Faça login aqui</a></p>
     <footer>
     <div class="col-100">
         <div class="content">
@@ -184,9 +175,9 @@ if(isset($_SESSION['user_id'])) {
             <p><strong>Número telefónico:</strong> +351 911000172</p>
             <p><strong>Email:</strong> GFTickets@gmail.com</p>
         </div>
-    </div>
+    </div>      
     </footer>
-</main>
-<script src="./Guiao-w0/scripts/main.js"></script>
+  </main>
+  <script src="./Guiao-w0/scripts/main.js"></script>
 </body>
 </html>

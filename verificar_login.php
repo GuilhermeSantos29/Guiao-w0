@@ -1,26 +1,25 @@
 <?php
 session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=gftickets', 'root', '');
+include('gftickets_connection.php');
 
-// Obtenha os dados do formulário de login
-$email = $_POST['email'];
-$password = $_POST['password'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-// Verifique se o usuário existe
-$stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
-$stmt->execute([$email]);
-$user = $stmt->fetch();
+    $sql = "SELECT id, password, is_admin FROM users WHERE email='$email'";
+    $result = $conn->query($sql);
 
-if ($user && password_verify($password, $user['password'])) {
-    // Login bem-sucedido
-    $_SESSION['user_id'] = $user['id'];
-    $_SESSION['is_seller'] = $user['is_seller'];
-    header('Location: index.php');
-    exit;
-} else {
-    // Login falhou
-    $_SESSION['login_error'] = 'E-mail ou senha incorretos.';
-    header('Location: login.php');
-    exit;
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row['password'])) {
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['is_admin'] = $row['is_admin'];
+            header("Location: index1.php");
+        } else {
+            echo "Invalid password.";
+        }
+    } else {
+        echo "No user found with this email.";
+    }
 }
 ?>
