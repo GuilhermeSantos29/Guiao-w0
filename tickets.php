@@ -213,6 +213,5 @@ include('gftickets_connection.php');
       </div>
     </footer>
   </main>
-  <script src="js/main.js"></script>
 </body>
 </html>
