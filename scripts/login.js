@@ -1,27 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        const email = this.email.value;
-        const password = this.password.value;
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-        if (!email || !password) {
-            displayMessage('All fields are required!', 'error');
-            event.preventDefault();
-        } else if (!validateEmail(email)) {
-            displayMessage('Please enter a valid email address!', 'error');
-            event.preventDefault();
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let errorMessage = document.getElementById('error-message');
+    
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', 'verificar_login.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            let responseText = xhr.responseText.trim();
+            if (responseText === '') {
+                window.location.href = 'index1.php';
+            } else {
+                errorMessage.textContent = responseText;
+            }
+        } else {
+            errorMessage.textContent = 'Erro ao conectar com o servidor.';
         }
-    });
+    };
+
+    xhr.send('email=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password));
 });
 
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-}
-
-function displayMessage(message, type) {
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `message ${type}`;
-    messageDiv.innerText = message;
-    document.body.prepend(messageDiv);
-    setTimeout(() => messageDiv.remove(), 3000);
-}
