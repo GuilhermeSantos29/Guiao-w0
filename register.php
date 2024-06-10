@@ -72,20 +72,6 @@
         float: left;
     }
 
-    .busca {
-        text-align: center;
-        width: 30%;
-        float: right;
-    }
-
-    .busca input {
-        height: 36px;
-        padding: 8px;
-        width: 190px;
-        margin-top: 10px;
-        border: 1px solid #d6d6d6;
-    }
-
     .col-100 {
         width: 100%;
         float: left;
@@ -148,9 +134,6 @@
                 <li><a href="login.php">Login</a></li>
             </ul>
         </div>
-        <div class="busca">
-            <input placeholder="Search Something" type="text" />
-        </div>
     </div>
     <form id="registerForm" method="post" action="verificar_register.php">
       <div class="form-group">
@@ -178,6 +161,6 @@
     </div>      
     </footer>
   </main>
-  <script src="./Guiao-w0/scripts/main.js"></script>
+  <script src="register.js"></script>
 </body>
 </html>

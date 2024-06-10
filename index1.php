@@ -75,20 +75,6 @@ include('gftickets_connection.php');
             float: left;
         }
 
-        .busca {
-            text-align: center;
-            width: 30%;
-            float: right;
-        }
-
-        .busca input {
-            height: 36px;
-            padding: 8px;
-            width: 190px;
-            margin-top: 10px;
-            border: 1px solid #d6d6d6;
-        }
-
         .col-100 {
             width: 100%;
             float: left;
@@ -212,20 +198,17 @@ include('gftickets_connection.php');
                     <?php endif; ?>
                 </ul>
             </div>
-            <div class="busca">
-                <input placeholder="Search Something" type="text" />
-            </div>
         </div>
     </main>
     <div class="col-100">
         <div class="imagem-background">
             <div class="content texto-destaque">
-                <h1>Seja Bem-Vindo à<strong> GFTickets</strong> adquira aqui o seu bilhete ao o seu evento de sonho!!!!</h1>
+                <h1>Seja Bem-Vindo à GFTickets, adquira aqui o bilhete para o seu concerto de sonho!!!!</h1>
             </div>
         </div>
     </div>
     <div class="col-100 bloco-imagens-texto">
-        <div class="content" style="margin-left: 24%; float: left;">
+        <div class="content" style="margin-left: 14%; float: left;">
             <?php
             $sql = "SELECT event_name, event_date, venue, image FROM tickets";
             $result = $conn->query($sql);
@@ -235,7 +218,7 @@ include('gftickets_connection.php');
                     echo '<div class="col-3 bloco-texto bloco-imagem">';
                     echo '<img src="' . $row["image"] . '">';
                     echo '<b>' . $row["event_name"] . '</b>';
-                    echo '<p>De ' . $row["event_date"] . ' (' . $row["venue"] . ')</p>';
+                    echo '<p>Data: ' . $row["event_date"] . ', local: ' . $row["venue"] . '</p>';
                     echo '</div>';
                 }
             } else {

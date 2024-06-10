@@ -90,20 +90,6 @@ if(isset($_SESSION['user_id'])) {
         height: 120px;
     }
 
-    .busca {
-        text-align: center;
-        width: 30%;
-        float: right;
-    }
-
-    .busca input {
-        height: 36px;
-        padding: 8px;
-        width: 190px;
-        margin-top: 10px;
-        border: 1px solid #d6d6d6;
-    }
-
     .col-100 {
         width: 100%;
         float: left;
@@ -160,9 +146,6 @@ if(isset($_SESSION['user_id'])) {
                 <li><a href="tickets.php">Bilhetes</a></li>
                 <li><a href="register.php">Registar</a></li>
             </ul>
-        </div>
-        <div class="busca">
-            <input placeholder="Search Something" type="text" />
         </div>      
     </div>
     <form id="loginForm" method="post" action="verificar_login.php">
@@ -187,6 +170,6 @@ if(isset($_SESSION['user_id'])) {
     </div>
     </footer>
 </main>
-<script src="./Guiao-w0/scripts/main.js"></script>
+<script src="./trabalho_deapc/Guiao-w0/scripts/login.js"></script>
 </body>
 </html>

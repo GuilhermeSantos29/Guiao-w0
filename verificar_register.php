@@ -9,10 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
     
     if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "Nova conta criada com sucesso";
         header("Location: login.html");
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Erro: " . $sql . "<br>" . $conn->error;
     }
 }
 ?>

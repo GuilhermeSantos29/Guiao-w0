@@ -16,10 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['is_admin'] = $row['is_admin'];
             header("Location: index1.php");
         } else {
-            echo "Invalid password.";
+            echo "Palavra-Passe Inválida.";
         }
     } else {
-        echo "No user found with this email.";
+        echo "O email não foi encontrado";
     }
 }
 ?>
