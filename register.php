@@ -161,6 +161,6 @@
     </div>      
     </footer>
   </main>
-  <script src="register.js"></script>
+<script type="text/javascript" src="./scripts/register.js"></script>
 </body>
 </html>
