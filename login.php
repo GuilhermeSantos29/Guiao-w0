@@ -1,11 +1,14 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrar</title>
+  <title>Login</title>
   <link rel="stylesheet" type="text/css" href="./Guiao-w0/styles/main.css">
- <style>
+  <style>
     body {
         width: 100%;
         height: 100%;
@@ -15,17 +18,21 @@
     ul {
         padding: 0px;
     }
-
-    .menu-principal {
-        width: 100%;
-        background-color: #252323;
-        height: 120px;
-    }
-
+    
     main, .content {
         margin: 0 auto;
         width: 980px;
         position: relative;
+    }
+    
+    main h2 {
+        text-align: center;
+    }
+   
+
+    main form {
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     .logo {
@@ -71,6 +78,12 @@
         width: 70%;
         float: left;
     }
+    
+    .menu-principal {
+        width: 100%;
+        background-color: #252323;
+        height: 120px;
+    }
 
     .busca {
         text-align: center;
@@ -92,10 +105,6 @@
         position: relative;
     }
 
-    .footer {
-        color: #ffffff;
-    }
-
     .form-group {
         margin-bottom: 15px;
     }
@@ -110,6 +119,10 @@
         padding: 8px;
         box-sizing: border-box;
     }
+    
+    .footer {
+        color: #ffffff;
+    }
 
     button {
         background-color: #00bac6;
@@ -121,11 +134,6 @@
 
     button:hover {
         background-color: #009aa6;
-    }
-
-    main form {
-        max-width: 400px;
-        margin: 0 auto;
     }
   </style>
 </head>
@@ -139,8 +147,7 @@
         </div>
     </main>
 </header>
-
-  <main class="col-100 menu-urls">
+<main class="col-100 menu-urls">
     <div class="header-2">
         <div class="menu">
             <ul>
@@ -151,31 +158,26 @@
                     <a href="tickets.html">Bilhetes</a>
                 </li>
                 <li>
-                    <a href="login.html">Login</a>
+                    <a href="register.html">Registar</a>
                 </li>
             </ul>
         </div>
         <div class="busca">
             <input placeholder="Search Something" type="text" />
-        </div>
+        </div>      
     </div>
-
-    <form id="registerForm" method="post" action="/submit_registration">
+    <form id="loginForm" method="post" action="/login">
       <div class="form-group">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
+        <label for="email">Email:</label>   
         <input type="email" id="email" name="email" required>
       </div>
       <div class="form-group">
         <label for="password">Senha:</label>
         <input type="password" id="password" name="password" required>
       </div>
-      <button type="submit">Registrar</button>
+      <button type="submit">Login</button>
     </form>
-    <p>Já tem uma conta? <a href="login.html">Faça login aqui</a></p>
+    <p>Não tem uma conta? <a href="register.html">Registre-se aqui</a></p>
     <footer>
     <div class="col-100">
         <div class="content">
@@ -183,13 +185,9 @@
             <p><strong>Número telefónico:</strong> +351 911000172</p>
             <p><strong>Email:</strong> GFTickets@gmail.com</p>
         </div>
-    </div>      
+    </div>
     </footer>
-  </main>
-  <script src="./Guiao-w0/scripts/main.js"></script>
+</main>
+<script src="./Guiao-w0/scripts/main.js"></script>
 </body>
 </html>
-
-
-
- 

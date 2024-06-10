@@ -1,3 +1,4 @@
+<?php
 $db=new sqlite('loja.sqlite');
 if($db){
 	echo "Erro ...";
@@ -16,3 +17,4 @@ if(!$Res){
 }
 $db->close();
 echo "Encomenda Registada";
+>

@@ -13,19 +13,23 @@
     }
 
     ul {
-        padding: 0px !important;
+        padding: 0px;
     }
-
-    .menu-principal {
-        width: 100%;
-        background-color: #252323;
-        height: 120px;
-    }
-
+    
     main, .content {
         margin: 0 auto;
         width: 980px;
         position: relative;
+    }
+    
+    main h2 {
+        text-align: center;
+    }
+   
+
+    main form {
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     .logo {
@@ -71,6 +75,12 @@
         width: 70%;
         float: left;
     }
+    
+    .menu-principal {
+        width: 100%;
+        background-color: #252323;
+        height: 120px;
+    }
 
     .busca {
         text-align: center;
@@ -79,12 +89,10 @@
     }
 
     .busca input {
-        background-repeat: no-repeat;
         height: 36px;
         padding: 8px;
         width: 190px;
         margin-top: 10px;
-        background-position: 96%;
         border: 1px solid #d6d6d6;
     }
 
@@ -93,139 +101,6 @@
         float: left;
         position: relative;
     }
-
-    button.slick-prev {
-        font-size: 0px;
-        border: none;
-        width: 25px;
-        height: 51px;
-        z-index: 9;
-        background-color: transparent;
-        position: absolute;
-        background-image: url(../img/anterior.png);
-        top: 35%;
-        left: 14%;
-    }
-
-    button.slick-next {
-        font-size: 0px;
-        border: none;
-        width: 25px;
-        height: 51px;
-        z-index: 9;
-        background-color: transparent;
-        position: absolute;
-        background-image: url(../img/proximo.png);
-        top: 35%;
-        right: 14%;
-    }
-
-    .slick-list {
-        width: 100% !important;
-    }
-
-    .slick-initialized {
-        overflow: hidden;
-    }
-
-    .slick-dots li button {
-        font-size: 0px;
-        border: 5px solid #ffffff;
-        width: 26px;
-        height: 26px;
-        background: transparent;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .slick-dots {
-        margin: 0 auto;
-        width: 50%;
-        position: absolute;
-        left: 50%;
-        top: 600px;
-    }
-
-    li.slick-active button {
-        background: #00bac6;
-    }
-
-    .slick-dots li {
-        padding-left: 10px;
-        display: inline-block;
-    }
-
-    .col-3 {
-        text-align: center;
-        padding-left: 15px;
-        padding-right: 15px;
-        width: 29%;
-        float: left;
-        position: relative;
-    }
-
-    
-
-   
-
-    h3 {
-        font-weight: normal !important;
-    }
-
-    
-
-
-    .col-4 {
-        float: left;
-        width: 25%;
-        text-align: center;
-    }
-
-    .col-4 img {
-        cursor: pointer;
-        margin: 0 auto;
-        padding-top: 1em;
-        vertical-align: middle;
-    }
-
-    .col-4 img:hover {
-        margin-top: 10px !important;
-        position: relative !important;
-    }
-
-    .bloco-logos {
-        height: 170px;
-    }
-
-    .bloco-logos img {
-        margin-top: 50px;
-    }
-
-    .footer h3 {
-        text-align: left;
-    }
-
-    .footer {
-        background-image: url('../img/footer.png');
-        color: #ffffff;
-    }
-
-    .footer-2 {
-        background-image: url('../img/footer2.png');
-        color: #c1c1c1;
-        height: 90px;
-    }
-
-    .footer p {
-        width: 90%;
-        text-align: left;
-    }
-
-    .footer-2 p {
-        padding: 10px;
-    }
-
-    
 
     .form-group {
         margin-bottom: 15px;
@@ -241,6 +116,10 @@
         padding: 8px;
         box-sizing: border-box;
     }
+    
+    .footer {
+        color: #ffffff;
+    }
 
     button {
         background-color: #00bac6;
@@ -252,15 +131,6 @@
 
     button:hover {
         background-color: #009aa6;
-    }
-
-    main h2 {
-        text-align: center;
-    }
-
-    main form {
-        max-width: 400px;
-        margin: 0 auto;
     }
   </style>
 </head>
@@ -291,9 +161,7 @@
         </div>
         <div class="busca">
             <input placeholder="Search Something" type="text" />
-        </div>
-        
-        
+        </div>      
     </div>
     <form id="loginForm" method="post" action="/login">
       <div class="form-group">
@@ -308,9 +176,9 @@
     </form>
     <p>Não tem uma conta? <a href="register.html">Registre-se aqui</a></p>
     <footer>
-    <div class="col-100 footer-2">
+    <div class="col-100">
         <div class="content">
-            <p><b>Qualquer problema, não hesite em nos contactar</b></p>
+            <p><b>Qualquer problema, não hesite em nos contactar:</b></p>
             <p><strong>Número telefónico:</strong> +351 911000172</p>
             <p><strong>Email:</strong> GFTickets@gmail.com</p>
         </div>

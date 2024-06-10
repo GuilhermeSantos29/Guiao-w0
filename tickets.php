@@ -6,7 +6,7 @@
   <title>Comprar Bilhete</title>
   <link rel="stylesheet" href="css/styles.css">
   <style>
- body {
+    body {
         width: 100%;
         height: 100%;
         margin: 0 auto;
@@ -133,15 +133,41 @@
       let quant_ele = document.getElementById("quantity");
       let quant_val = quant_ele.value;
       let quant = parseInt(quant_val);
-      
+
       let preco_ele = document.getElementById("preco");
       let preco_val = preco_ele.innerHTML;
       let preco = parseFloat(preco_val);
-      
+
       let total = preco * quant;
       let total_ele = document.getElementById("total");
       total_ele.value = total;
     }
+
+    function update_price() {
+      let event_ele = document.getElementById("event");
+      let preco_ele = document.getElementById("preco");
+      let available_tickets_ele = document.getElementById("available_tickets");
+
+      let event_details = {
+        "Travis Scott": { price: 100, tickets: 50 },
+        "MEO Marés Vivas": { price: 80, tickets: 100 },
+        "Matue": { price: 70, tickets: 150 },
+        "Taylor Swift": { price: 120, tickets: 30 },
+        "Van Zee": { price: 60, tickets: 200 },
+        "The Weeknd": { price: 150, tickets: 20 }
+      };
+
+      let selected_event = event_ele.value;
+      let selected_details = event_details[selected_event];
+      preco_ele.innerHTML = selected_details.price;
+      available_tickets_ele.innerHTML = selected_details.tickets;
+
+      calc_total();
+    }
+
+    window.onload = function() {
+      update_price();
+    };
   </script>
 </head>
 <body>
@@ -154,31 +180,45 @@
       </div>
     </main>
   </header>
-    <main class="col-100 menu-urls">
-      <div class="header-2">
-        <div class="menu">
-          <ul>
-            <li>
-              <a href="index1.html">Home</a>
-            </li>
-            <li>
-              <a href="tickets.html">Bilhetes</a>
-            </li>
-            <li>
-              <a href="login.html">Login</a>
-            </li>
-          </ul>
-        </div>
-        <div class="busca">
-          <input placeholder="Search Something" type="text">
-        </div>
+  <main class="col-100 menu-urls">
+    <div class="header-2">
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="index1.html">Home</a>
+          </li>
+          <li>
+            <a href="tickets.php">Bilhetes</a>
+          </li>
+          <li>
+            <a href="login.html">Login</a>
+          </li>
+        </ul>
       </div>
-    
-   
-    <form id="purchaseForm">
+      <div class="busca">
+        <input placeholder="Search Something" type="text">
+      </div>
+    </div>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $evento = htmlspecialchars($_POST['event']);
+      $quantidade = intval($_POST['quantity']);
+      $total = floatval($_POST['total']);
+
+      echo "<div class='content'>";
+      echo "<h2>Resumo da Compra</h2>";
+      echo "<p>Evento: $evento</p>";
+      echo "<p>Quantidade: $quantidade</p>";
+      echo "<p>Total: $total €</p>";
+      echo "</div>";
+    }
+    ?>
+
+    <form id="purchaseForm" method="post" action="tickets.php">
       <div class="form-group">
         <label for="event">Evento:</label>
-        <select id="event" name="event">
+        <select id="event" name="event" onchange="update_price()">
           <option>Travis Scott</option>
           <option>MEO Marés Vivas</option>
           <option>Matue</option>
@@ -192,6 +232,10 @@
         <span id="preco">100</span> 
       </div>
       <div class="form-group">
+        <label for="available_tickets">Bilhetes Disponíveis:</label>
+        <span id="available_tickets">50</span>
+      </div>
+      <div class="form-group">
         <label for="quantity">Quantidade:</label>
         <input type="number" id="quantity" name="quantity" min="1" required oninput="calc_total()">
       </div>
@@ -202,17 +246,18 @@
       <button type="submit">Comprar</button>
     </form>
     <footer>
-    <div class="col-100">
+      <div class="col-100">
         <div class="content">
-            <p><b>Qualquer problema, não hesite em nos contactar:</b></p>
-            <p><strong>Número telefónico:</strong> +351 911000172</p>
-            <p><strong>Email:</strong> GFTickets@gmail.com</p>
+          <p><b>Qualquer problema, não hesite em nos contactar:</b></p>
+          <p><strong>Número telefónico:</strong> +351 911000172</p>
+          <p><strong>Email:</strong> GFTickets@gmail.com</p>
         </div>
-    </div>
+      </div>
     </footer>
   </main>
   <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
