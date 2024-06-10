@@ -170,6 +170,6 @@ if(isset($_SESSION['user_id'])) {
     </div>
     </footer>
 </main>
-<script src="./trabalho_deapc/Guiao-w0/scripts/login.js"></script>
+<script type="text/javascript" src="./scripts/login.js"></script>
 </body>
 </html>
